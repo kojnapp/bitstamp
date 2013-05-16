@@ -15,10 +15,10 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "bitstamp"
-  gem.homepage = "http://github.com/stygeo/bitstamp"
+  gem.homepage = "http://github.com/kojnapp/bitstamp"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Bitstamp Ruby API}
+  gem.description = %Q{Ruby API for use with bitstamp.}
   gem.email = "stygeo@gmail.com"
   gem.authors = ["Jeffrey Wilcke"]
   # dependencies defined in Gemfile
