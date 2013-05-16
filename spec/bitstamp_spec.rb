@@ -19,6 +19,10 @@ describe Bitstamp do
     Bitstamp.should respond_to :orders
   end
 
+  it 'should have a ticker helper method' do
+    Bitstamp.ticker.should be_kind_of Bitstamp::Ticker
+  end
+
   it 'should list information about your balance' do
     read_bitstamp_yaml
 

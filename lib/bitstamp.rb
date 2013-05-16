@@ -4,10 +4,12 @@ require 'active_model'
 require 'curb'
 
 require 'bitstamp/net'
+require 'bitstamp/helper'
 require 'bitstamp/collection'
 require 'bitstamp/model'
 
 require 'bitstamp/orders'
+require 'bitstamp/ticker'
 
 String.send(:include, ActiveSupport::Inflector)
 
@@ -32,6 +34,10 @@ module Bitstamp
     self.sanity_check!
 
     JSON.parse Bitstamp::Net.get('/balance').body_str
+  end
+
+  def self.ticker
+    Bitstamp::Helper.parse_object! Bitstamp::Net.get('/ticker').body_str, Bitstamp::Ticker
   end
 
   def self.setup

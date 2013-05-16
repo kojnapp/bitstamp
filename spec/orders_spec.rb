@@ -10,10 +10,10 @@ describe Bitstamp::Orders do
   end
 
   it "should sell bitcoins" do
-    puts Bitstamp.orders.sell(:amount => 1, :price => 1000).inspect
+    Bitstamp.orders.sell(:amount => 1, :price => 1000)
   end
 
   it "should buy bitcoins" do
-    puts Bitstamp.orders.buy(:amount => 1, :price => 1.01).inspect
+    Bitstamp.orders.buy(:amount => 1, :price => 1.01)
   end
 end

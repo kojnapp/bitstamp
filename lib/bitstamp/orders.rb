@@ -1,12 +1,12 @@
 module Bitstamp
   class Orders < Bitstamp::Collection
     def all(options = {})
-      parse_objects! Bitstamp::Net::post('/open_orders').body_str, self.model
+      Bitstamp::Helper.parse_objects! Bitstamp::Net::post('/open_orders').body_str, self.model
     end
 
     def create(options = {})
       path = (options[:type] == Bitstamp::Order::SELL ? "/sell" : "/buy")
-      parse_object! Bitstamp::Net::post(path, options).body_str, self.model
+      Bitstamp::Helper.parse_object! Bitstamp::Net::post(path, options).body_str, self.model
     end
 
     def sell(options = {})

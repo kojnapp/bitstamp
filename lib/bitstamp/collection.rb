@@ -12,33 +12,19 @@ module Bitstamp
     end
 
     def all(options = {})
-      parse_objects! Bitstamp::Net::get(self.path).body_str, self.model
+      Bitstamp::Helper.parse_objects! Bitstamp::Net::get(self.path).body_str, self.model
     end
 
     def create(options = {})
-      parse_object! Bitstamp::Net::post(self.path, options).body_str, self.model
+      Bitstamp::Helper.parse_object! Bitstamp::Net::post(self.path, options).body_str, self.model
     end
 
     def find(id, options = {})
-      parse_object! Bistamp::Net::get("#{self.path}/#{id}").body_str, self.model
+      Bitstamp::Helper.parse_object! Bistamp::Net::get("#{self.path}/#{id}").body_str, self.model
     end
 
     def update(id, options = {})
-      parse_object! Bitstamp::Net::patch("#{self.path}/#{id}", options).body_str, self.model
-    end
-
-    protected
-    def parse_objects!(string, klass)
-      objects = JSON.parse(string)
-      objects.collect do |t_json|
-        parse_object!(t_json, klass)
-      end
-    end
-
-    def parse_object!(object, klass)
-      object = JSON.parse(object) if object.is_a? String
-
-      klass.new(object)
+      Bitstamp::Helper.parse_object! Bitstamp::Net::patch("#{self.path}/#{id}", options).body_str, self.model
     end
   end
 end
