@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jeffrey Wilcke"]
   s.date = "2013-05-16"
-  s.description = "TODO: longer description of your gem"
+  s.description = "Ruby API for use with bitstamp."
   s.email = "stygeo@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -35,11 +35,11 @@ Gem::Specification.new do |s|
     "spec/orders_spec.rb",
     "spec/spec_helper.rb"
   ]
-  s.homepage = "http://github.com/stygeo/bitstamp"
+  s.homepage = "http://github.com/kojnapp/bitstamp"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.25"
-  s.summary = "TODO: one-line summary of your gem"
+  s.summary = "Bitstamp Ruby API"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
