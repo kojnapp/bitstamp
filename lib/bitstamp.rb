@@ -37,7 +37,7 @@ module Bitstamp
   end
 
   def self.ticker
-    Bitstamp::Helper.parse_object! Bitstamp::Net.get('/ticker').body_str, Bitstamp::Ticker
+    return Bitstamp::Ticker.from_api
   end
 
   def self.setup
