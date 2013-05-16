@@ -1,0 +1,4 @@
+bitstamp
+========
+
+Bitstamp Ruby API
