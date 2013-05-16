@@ -16,7 +16,7 @@ module Bitstamp
     end
 
     def create(options = {})
-      parse_object! Bitstamp::Net::post(self.path, {invoice: options}).body_str, self.model
+      parse_object! Bitstamp::Net::post(self.path, options).body_str, self.model
     end
 
     def find(id, options = {})

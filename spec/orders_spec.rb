@@ -8,4 +8,12 @@ describe Bitstamp::Orders do
   it "should return an array when querying for all orders" do
     Bitstamp.orders.all.should be_kind_of Array
   end
+
+  it "should sell bitcoins" do
+    puts Bitstamp.orders.sell(:amount => 1, :price => 1000).inspect
+  end
+
+  it "should buy bitcoins" do
+    puts Bitstamp.orders.buy(:amount => 1, :price => 1.01).inspect
+  end
 end
