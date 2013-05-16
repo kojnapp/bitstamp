@@ -52,7 +52,19 @@ Returns an `Order` object.
 Bitstamp.orders.buy(amount: 1.0, price: 111)
 ```
 
-To be continued!
+*To be continued!**
+
+# Tests
+
+If you'd like to run the tests you need to create a yaml file in the
+root of the gem `bit_stamp_details.yml` which holds your authentication
+details for Bitstamp.
+
+```yaml
+bitstamp:
+  id: 'bitstamp id'
+  password: 'bitstamp password'
+```
 
 ## Contributing
 
