@@ -20,6 +20,14 @@ end
 If you fail to set your `key` or `secret` a `MissingConfigExecption`
 will be raised.
 
+## Bitstamp ticker
+
+The bitstamp ticker. Returns `last`, `high`, `low`, `volume`, `bid` and `ask`
+
+```ruby
+Bitstamp.ticker
+```
+
 ## Fetch your open order
 
 Returns an array with your open orders.
