@@ -6,7 +6,7 @@ Feel free to fork, modify & redistribute under the MIT license.
 
 Add this line to your application's Gemfile:
 
-    gem 'kojn'
+    gem 'bitstamp'
     
 ## Setup
 
