@@ -28,6 +28,13 @@ The bitstamp ticker. Returns `last`, `high`, `low`, `volume`, `bid` and `ask`
 Bitstamp.ticker
 ```
 
+It's also possible to query through the `Bitstamp::Ticker` object with
+each individual method.
+
+```ruby
+Bitstamp::Ticker.low     # => "109.00"
+```
+
 ## Fetch your open order
 
 Returns an array with your open orders.
