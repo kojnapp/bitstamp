@@ -8,7 +8,7 @@ module Bitstamp
 
     def self.method_missing method, *args
       ticker = self.from_api
-      return ticker if ticker.respond_to? :method
+      return ticker.send(method) if ticker.respond_to? method
 
       super
     end
