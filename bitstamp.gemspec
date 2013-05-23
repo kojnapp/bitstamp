@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "bitstamp"
-  s.version = "0.2.2"
+  s.version = "0.2.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jeffrey Wilcke"]
-  s.date = "2013-05-17"
+  s.date = "2013-05-23"
   s.description = "Ruby API for use with bitstamp."
   s.email = "stygeo@gmail.com"
   s.extra_rdoc_files = [
