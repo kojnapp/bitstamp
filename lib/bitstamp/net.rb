@@ -1,7 +1,6 @@
 module Bitstamp
   module Net
     def self.to_uri(path)
-      #return "http#{Kojn.ssl ? "s" : ""}://#{Kojn.host}:#{Kojn.port}#{path}"
       return "https://www.bitstamp.net/api#{path}/"
     end
 
@@ -23,15 +22,11 @@ module Bitstamp
     def self.get(path, options={})
       request = self.curl(:GET, path, options)
 
-      request.perform
-
       return request
     end
 
     def self.post(path, options={})
       request = self.curl(:POST, path, options)
-
-      request.perform
 
       return request
     end
@@ -39,15 +34,11 @@ module Bitstamp
     def self.patch(path, options={})
       request = self.curl(:PATCH, path, options)
 
-      request.perform
-
       return request
     end
 
     def self.delete(path, options={})
       request = self.curl(:DELETE, path, options)
-
-      request.perform
 
       return request
     end
