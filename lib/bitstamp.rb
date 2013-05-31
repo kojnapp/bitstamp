@@ -33,7 +33,7 @@ module Bitstamp
   def self.balance
     self.sanity_check!
 
-    JSON.parse Bitstamp::Net.get('/balance').body_str
+    JSON.parse Bitstamp::Net.post('/balance').body_str
   end
 
   def self.ticker
