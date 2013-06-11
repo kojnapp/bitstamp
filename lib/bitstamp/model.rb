@@ -15,7 +15,11 @@ module Bitstamp
     # Set the attributes based on the given hash
     def attributes=(attributes = {})
       attributes.each do |name, value|
-        send("#{name}=", value)
+        begin
+          send("#{name}=", value)
+        rescue NoMethodError => e
+          puts "Unable to assign #{name}. No such method."
+        end
       end
     end
 
