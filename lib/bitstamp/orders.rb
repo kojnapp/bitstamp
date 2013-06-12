@@ -18,6 +18,13 @@ module Bitstamp
       options.merge!({type: Bitstamp::Order::BUY})
       self.create options
     end
+
+    def find(order_id)
+      all = self.all
+      index = all.index {|order| order.id.to_i == order_id}
+
+      return all[index] if index
+    end
   end
 
   class Order < Bitstamp::Model
@@ -26,5 +33,9 @@ module Bitstamp
 
     attr_accessor :type, :amount, :price, :id, :datetime
     attr_accessor :error, :message
+
+    def cancel!
+      Bitstamp::Net::post('/cancel_order', {id: self.id}).body_str
+    end
   end
 end

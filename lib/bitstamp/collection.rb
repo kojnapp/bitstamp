@@ -20,7 +20,7 @@ module Bitstamp
     end
 
     def find(id, options = {})
-      Bitstamp::Helper.parse_object! Bistamp::Net::get("#{self.path}/#{id}").body_str, self.model
+      Bitstamp::Helper.parse_object! Bitstamp::Net::get("#{self.path}/#{id}").body_str, self.model
     end
 
     def update(id, options = {})
