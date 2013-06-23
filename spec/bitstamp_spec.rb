@@ -28,4 +28,16 @@ describe Bitstamp do
 
     Bitstamp.balance.should be_kind_of Hash
   end
+
+  it 'should have a order_book method' do
+    Bitstamp.order_book.should be_kind_of Hash
+  end
+
+  it 'should have bids and asks in the order_book' do
+    order_book = Bitstamp.order_book
+    order_book.should have_key("asks")
+    order_book.should have_key("bids")
+    order_book["asks"].should be_kind_of Array
+    order_book["bids"].should be_kind_of Array
+  end
 end
