@@ -40,6 +40,10 @@ module Bitstamp
     return Bitstamp::Ticker.from_api
   end
 
+  def self.order_book
+    return JSON.parse Bitstamp::Net.post('/order_book/').body_str
+  end
+
   def self.setup
     yield self
   end
