@@ -59,6 +59,14 @@ Returns an `Order` object.
 Bitstamp.orders.buy(amount: 1.0, price: 111)
 ```
 
+## Fetch your transactions
+
+Returns an `Array` of `UserTransaction`.
+
+```ruby
+Bitstamp.user_transactions.all
+```
+
 *To be continued!**
 
 # Tests
