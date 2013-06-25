@@ -9,6 +9,7 @@ require 'bitstamp/collection'
 require 'bitstamp/model'
 
 require 'bitstamp/orders'
+require 'bitstamp/transactions'
 require 'bitstamp/ticker'
 
 String.send(:include, ActiveSupport::Inflector)
@@ -28,6 +29,12 @@ module Bitstamp
     self.sanity_check!
 
     @@orders ||= Bitstamp::Orders.new
+  end
+
+  def self.user_transactions
+    self.sanity_check!
+
+    @@transactions ||= Bitstamp::UserTransactions.new
   end
 
   def self.balance

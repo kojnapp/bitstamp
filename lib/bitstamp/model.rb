@@ -1,5 +1,7 @@
 module Bitstamp
   class Model
+    attr_accessor :error, :message
+
     if ActiveModel::VERSION::MAJOR <= 3
       include ActiveModel::Validations
       include ActiveModel::Conversion
