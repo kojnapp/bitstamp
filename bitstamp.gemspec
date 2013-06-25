@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "bitstamp"
-  s.version = "0.2.6"
+  s.version = "0.2.7"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jeffrey Wilcke"]
-  s.date = "2013-06-12"
+  s.date = "2013-06-25"
   s.description = "Ruby API for use with bitstamp."
   s.email = "stygeo@gmail.com"
   s.extra_rdoc_files = [
@@ -32,10 +32,12 @@ Gem::Specification.new do |s|
     "lib/bitstamp/net.rb",
     "lib/bitstamp/orders.rb",
     "lib/bitstamp/ticker.rb",
+    "lib/bitstamp/transactions.rb",
     "spec/bitstamp_spec.rb",
     "spec/collection_spec.rb",
     "spec/orders_spec.rb",
-    "spec/spec_helper.rb"
+    "spec/spec_helper.rb",
+    "spec/transactions_spec.rb"
   ]
   s.homepage = "http://github.com/kojnapp/bitstamp"
   s.licenses = ["MIT"]
