@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "bitstamp"
-  s.version = "0.2.7"
+  s.name = %q{bitstamp}
+  s.version = "0.2.8"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Jeffrey Wilcke"]
-  s.date = "2013-06-25"
-  s.description = "Ruby API for use with bitstamp."
-  s.email = "stygeo@gmail.com"
+  s.authors = [%q{Jeffrey Wilcke}]
+  s.date = %q{2013-08-27}
+  s.description = %q{Ruby API for use with bitstamp.}
+  s.email = %q{stygeo@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.md"
@@ -39,11 +39,11 @@ Gem::Specification.new do |s|
     "spec/spec_helper.rb",
     "spec/transactions_spec.rb"
   ]
-  s.homepage = "http://github.com/kojnapp/bitstamp"
-  s.licenses = ["MIT"]
-  s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.25"
-  s.summary = "Bitstamp Ruby API"
+  s.homepage = %q{http://github.com/kojnapp/bitstamp}
+  s.licenses = [%q{MIT}]
+  s.require_paths = [%q{lib}]
+  s.rubygems_version = %q{1.8.0}
+  s.summary = %q{Bitstamp Ruby API}
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
