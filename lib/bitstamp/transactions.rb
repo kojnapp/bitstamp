@@ -22,6 +22,6 @@ module Bitstamp
   end
 
   class UserTransaction < Bitstamp::Model
-    attr_accessor :datetime, :id, :type, :usd, :btc, :fee, :order_id
+    attr_accessor :datetime, :id, :type, :usd, :btc, :fee, :order_id, :btc_usd
   end
 end
