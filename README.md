@@ -17,7 +17,7 @@ Bitstamp.setup do |config|
 end
 ```
 
-If you fail to set your `key` or `secret` a `MissingConfigExecption`
+If you fail to set your `key` or `secret` a `MissingConfigExeception`
 will be raised.
 
 ## Bitstamp ticker

@@ -57,9 +57,9 @@ module Bitstamp
 
   def self.sanity_check!
     unless self.key || self.secret
-      raise MissingConfigExecption.new("Bitstamp Gem not properly configured")
+      raise MissingConfigExeception.new("Bitstamp Gem not properly configured")
     end
   end
 
-  class MissingConfigExecption<Exception;end;
+  class MissingConfigExeception<Exception;end;
 end

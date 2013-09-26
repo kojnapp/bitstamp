@@ -34,9 +34,14 @@ describe Bitstamp do
   end
 
   describe :balance, vcr: {cassette_name: 'bitstamp/balance'} do
-    before { setup_bitstamp }
-    subject { Bitstamp.balance }
-    it { should == {"btc_reserved"=>"0", "fee"=>"0.4000", "btc_available"=>"0", "usd_reserved"=>"0", "btc_balance"=>"0", "usd_balance"=>"6953.07", "usd_available"=>"6953.07"} }
+    context "configured" do
+      subject { Bitstamp.balance }
+      before { setup_bitstamp }
+      it { should == {"btc_reserved"=>"0", "fee"=>"0.4000", "btc_available"=>"0", "usd_reserved"=>"0", "btc_balance"=>"0", "usd_balance"=>"6953.07", "usd_available"=>"6953.07"} }      
+    end
+    context "not configured" do
+      it { expect { Bitstamp.balance }.to raise_exception(Bitstamp::MissingConfigExeception, "Bitstamp Gem not properly configured") }
+    end
   end
 
   describe :order_book, vcr: {cassette_name: 'bitstamp/order_book'} do
