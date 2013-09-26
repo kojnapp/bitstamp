@@ -7,17 +7,22 @@ Feel free to fork, modify & redistribute under the MIT license.
 Add this line to your application's Gemfile:
 
     gem 'bitstamp'
+
+## Create API Key
+
+More info at: [https://www.bitstamp.net/article/api-key-implementation/](https://www.bitstamp.net/article/api-key-implementation/)
     
 ## Setup
 
 ```ruby
 Bitstamp.setup do |config|
-  config.key = YOUR_BITSTAMP_USERNAME
-  config.secret = YOUR_BITSTAMP_PASSWORD
+  config.key = YOUR_API_KEY
+  config.secret = YOUR_API_SECRET
+  config.client_id = YOUR_BITSTAMP_USERNAME
 end
 ```
 
-If you fail to set your `key` or `secret` a `MissingConfigExeception`
+If you fail to set your `key` or `secret` or `client_id` a `MissingConfigExeception`
 will be raised.
 
 ## Bitstamp ticker
@@ -71,14 +76,12 @@ Bitstamp.user_transactions.all
 
 # Tests
 
-If you'd like to run the tests you need to create a yaml file in the
-root of the gem `bit_stamp_details.yml` which holds your authentication
-details for Bitstamp.
+If you'd like to run the tests you need to set the following environment variables:
 
-```yaml
-bitstamp:
-  id: 'bitstamp id'
-  password: 'bitstamp password'
+```
+export BITSTAMP_KEY=xxx
+export BITSTAMP_SECRET=yyy
+export BITSTAMP_CLIENT_ID=zzz
 ```
 
 ## Contributing
