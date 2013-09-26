@@ -5,7 +5,7 @@ http_interactions:
     uri: https://www.bitstamp.net/api/balance/
     body:
       encoding: US-ASCII
-      string: password=BITSTAMP_SECRET&user=BITSTAMP_KEY
+      string: key=BITSTAMP_KEY&nonce=1380237671&signature=67768DD1BBDF45203840CC8688847A2DF5D224CA15B3ABDDC804EA251AC12211
     headers: {}
   response:
     status:
@@ -18,27 +18,27 @@ http_interactions:
         Y2xvdWRmbGFyZS1uZ2lueA==
       !binary "RGF0ZQ==":
       - !binary |-
-        VGh1LCAyNiBTZXAgMjAxMyAyMTo1OTowMiBHTVQ=
+        VGh1LCAyNiBTZXAgMjAxMyAyMzoyMToxOCBHTVQ=
       !binary "Q29udGVudC1UeXBl":
       - !binary |-
         YXBwbGljYXRpb24vanNvbg==
-      !binary "Q29udGVudC1MZW5ndGg=":
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
       - !binary |-
-        MTU1
+        Y2h1bmtlZA==
       !binary "Q29ubmVjdGlvbg==":
       - !binary |-
         a2VlcC1hbGl2ZQ==
       !binary "U2V0LUNvb2tpZQ==":
       - !binary |-
-        X19jZmR1aWQ9ZDZkZGUxMmQ5MzFmNjg4NjQ0NTFkNGM3MGQyNzc5MWEyMTM4
-        MDIzMjc0MjIxMzsgZXhwaXJlcz1Nb24sIDIzLURlYy0yMDE5IDIzOjUwOjAw
+        X19jZmR1aWQ9ZDg2ZTkzYTIxNzY5Y2UxZDQzODc2YzQ1N2ZjNTU3ZmNjMTM4
+        MDIzNzY3Nzk1ODsgZXhwaXJlcz1Nb24sIDIzLURlYy0yMDE5IDIzOjUwOjAw
         IEdNVDsgcGF0aD0vOyBkb21haW49LmJpdHN0YW1wLm5ldA==
       !binary "Q29udGVudC1MYW5ndWFnZQ==":
       - !binary |-
         ZW4=
       !binary "RXhwaXJlcw==":
       - !binary |-
-        VGh1LCAyNiBTZXAgMjAxMyAyMTo1OTowMiBHTVQ=
+        VGh1LCAyNiBTZXAgMjAxMyAyMzoyMToxOCBHTVQ=
       !binary "VmFyeQ==":
       - !binary |-
         QWNjZXB0LUxhbmd1YWdl
@@ -47,17 +47,17 @@ http_interactions:
         bWF4LWFnZT0w
       !binary "TGFzdC1Nb2RpZmllZA==":
       - !binary |-
-        VGh1LCAyNiBTZXAgMjAxMyAyMTo1OTowMiBHTVQ=
+        VGh1LCAyNiBTZXAgMjAxMyAyMzoyMToxOCBHTVQ=
       !binary "Q2YtUmF5":
       - !binary |-
-        YjQzMzgwZWQ0MzIwODdh
+        YjQzYjA4ZjM5ZDgwMDk3
     body:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJidGNfcmVzZXJ2ZWQiOiAiMCIsICJmZWUiOiAiMC40MDAwIiwgImJ0Y19h
-        dmFpbGFibGUiOiAiMCIsICJ1c2RfcmVzZXJ2ZWQiOiAiMCIsICJidGNfYmFs
-        YW5jZSI6ICIwIiwgInVzZF9iYWxhbmNlIjogIjY5NTMuMDciLCAidXNkX2F2
-        YWlsYWJsZSI6ICI2OTUzLjA3In0=
+        dmFpbGFibGUiOiAiMCIsICJ1c2RfcmVzZXJ2ZWQiOiAiMS4wMiIsICJidGNf
+        YmFsYW5jZSI6ICIwIiwgInVzZF9iYWxhbmNlIjogIjY5NTMuMDciLCAidXNk
+        X2F2YWlsYWJsZSI6ICI2OTUyLjA1In0=
     http_version: 
-  recorded_at: Thu, 26 Sep 2013 21:59:03 GMT
+  recorded_at: Thu, 26 Sep 2013 23:21:18 GMT
 recorded_with: VCR 2.6.0

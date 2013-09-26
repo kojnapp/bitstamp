@@ -2,6 +2,7 @@ require 'active_support/core_ext'
 require 'active_support/inflector'
 require 'active_model'
 require 'curb'
+require 'hmac-sha2'
 
 require 'bitstamp/net'
 require 'bitstamp/helper'
@@ -20,6 +21,9 @@ module Bitstamp
 
   # Bitstamp secret
   mattr_accessor :secret
+  
+  # Bitstamp client ID
+  mattr_accessor :client_id
 
   # Currency
   mattr_accessor :currency
@@ -54,9 +58,13 @@ module Bitstamp
   def self.setup
     yield self
   end
+  
+  def self.configured?
+    self.key && self.secret && self.client_id
+  end
 
   def self.sanity_check!
-    unless self.key || self.secret
+    unless configured?
       raise MissingConfigExeception.new("Bitstamp Gem not properly configured")
     end
   end

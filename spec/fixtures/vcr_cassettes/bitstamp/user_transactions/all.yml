@@ -5,7 +5,7 @@ http_interactions:
     uri: https://www.bitstamp.net/api/user_transactions/
     body:
       encoding: US-ASCII
-      string: password=BITSTAMP_SECRET&timedelta=3600&user=BITSTAMP_KEY
+      string: key=BITSTAMP_KEY&nonce=1380238185&signature=7CBA96CEB133CF1E40EB223B8EE85696D75FFFB2AF8DFF9052F9F6651F829C2A&timedelta=3600
     headers: {}
   response:
     status:
@@ -18,7 +18,7 @@ http_interactions:
         Y2xvdWRmbGFyZS1uZ2lueA==
       !binary "RGF0ZQ==":
       - !binary |-
-        VGh1LCAyNiBTZXAgMjAxMyAyMjowMjozNSBHTVQ=
+        VGh1LCAyNiBTZXAgMjAxMyAyMzoyOTo0NiBHTVQ=
       !binary "Q29udGVudC1UeXBl":
       - !binary |-
         YXBwbGljYXRpb24vanNvbg==
@@ -30,15 +30,15 @@ http_interactions:
         a2VlcC1hbGl2ZQ==
       !binary "U2V0LUNvb2tpZQ==":
       - !binary |-
-        X19jZmR1aWQ9ZDQ4NGQxNmVhZjU3YjNhNTU3OTFlMzlhYWUyZjIyNmY5MTM4
-        MDIzMjk1Mzk5OTsgZXhwaXJlcz1Nb24sIDIzLURlYy0yMDE5IDIzOjUwOjAw
+        X19jZmR1aWQ9ZDg0ODRmMzI3NTJiOTlmMGMzNzI0YWE1YjNkYjczNjA2MTM4
+        MDIzODE4NTY4MzsgZXhwaXJlcz1Nb24sIDIzLURlYy0yMDE5IDIzOjUwOjAw
         IEdNVDsgcGF0aD0vOyBkb21haW49LmJpdHN0YW1wLm5ldA==
       !binary "Q29udGVudC1MYW5ndWFnZQ==":
       - !binary |-
         ZW4=
       !binary "RXhwaXJlcw==":
       - !binary |-
-        VGh1LCAyNiBTZXAgMjAxMyAyMjowMjozNCBHTVQ=
+        VGh1LCAyNiBTZXAgMjAxMyAyMzoyOTo0NiBHTVQ=
       !binary "VmFyeQ==":
       - !binary |-
         QWNjZXB0LUxhbmd1YWdl
@@ -47,10 +47,10 @@ http_interactions:
         bWF4LWFnZT0w
       !binary "TGFzdC1Nb2RpZmllZA==":
       - !binary |-
-        VGh1LCAyNiBTZXAgMjAxMyAyMjowMjozNCBHTVQ=
+        VGh1LCAyNiBTZXAgMjAxMyAyMzoyOTo0NiBHTVQ=
       !binary "Q2YtUmF5":
       - !binary |-
-        YjQzM2QzYTc5ZTEwMDk3
+        YjQzYmNmNDg0NjQwMzIw
     body:
       encoding: ASCII-8BIT
       string: !binary |-
@@ -219,5 +219,5 @@ http_interactions:
         ZWUiOiAiMTUuMDAiLCAidHlwZSI6IDAsICJpZCI6IDEyMTgzODUsICJkYXRl
         dGltZSI6ICIyMDEzLTA4LTE5IDEzOjA0OjM5In1d
     http_version: 
-  recorded_at: Thu, 26 Sep 2013 22:02:35 GMT
+  recorded_at: Thu, 26 Sep 2013 23:29:46 GMT
 recorded_with: VCR 2.6.0

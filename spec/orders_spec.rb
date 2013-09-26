@@ -11,15 +11,15 @@ describe Bitstamp::Orders do
       its(:price) { should == "1.01" }
       its(:amount) { should == "1.00000000" }
       its(:type) { should == 0 }
-      its(:datetime) { should == "2013-09-26 22:01:35" }
+      its(:datetime) { should == "2013-09-26 23:15:04" }
     end
   end
 
   describe :sell do
-    context "no bitcoins available", vcr: {cassette_name: 'bitstamp/orders/sell/failure'} do
+    context "no permission found", vcr: {cassette_name: 'bitstamp/orders/sell/failure'} do
       subject { Bitstamp.orders.sell(:amount => 1, :price => 1000) }
       it { should be_kind_of Bitstamp::Order }
-      its(:error) { should == {"__all__"=>["You have only 0 BTC available. Check your account balance for details."]} }
+      its(:error) { should == "No permission found" }
     end
     # context "bitcoins available", vcr: {cassette_name: 'bitstamp/orders/sell/success'} do
     #   subject { Bitstamp.orders.sell(:amount => 1, :price => 1000) }
@@ -34,7 +34,7 @@ describe Bitstamp::Orders do
     its(:price) { should == "1.01" }
     its(:amount) { should == "1" }
     its(:type) { should == 0 }
-    its(:datetime) { should == "2013-09-26 22:01:34.650427" }
+    its(:datetime) { should == "2013-09-26 23:26:56.849475" }
     its(:error) { should be_nil }
   end
 end

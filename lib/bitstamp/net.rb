@@ -9,8 +9,11 @@ module Bitstamp
 
       c = Curl::Easy.new(self.to_uri(path))
 
-      options[:user] = Bitstamp.key
-      options[:password] = Bitstamp.secret
+      if Bitstamp.configured?
+        options[:key] = Bitstamp.key
+        options[:nonce] = Time.now.to_i.to_s
+        options[:signature] = HMAC::SHA256.hexdigest(Bitstamp.secret, options[:nonce]+Bitstamp.client_id+options[:key]).upcase
+      end
 
       c.post_body = options.to_query
 
