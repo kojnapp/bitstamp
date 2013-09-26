@@ -8,6 +8,10 @@ require 'bundler/setup'
 
 require 'bitstamp'
 
+# Requires supporting ruby files with custom matchers and macros, etc,
+# in spec/support/ and its subdirectories.
+Dir[File.expand_path("./spec/support/**/*.rb")].each { |f| require f }
+
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
@@ -19,23 +23,4 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = 'random'
-
-  config.before(:all) {}
-  config.before(:each) do
-    # The famous singleton problem
-    Bitstamp.setup do |config|
-      config.key = nil
-      config.secret = nil
-    end
-  end
-  config.after(:all) {}
-  config.after(:each) {}
-end
-
-def read_bitstamp_yaml
-  Bitstamp.setup do |config|
-    yaml = YAML::load( File.read('bit_stamp_details.yml') )
-    config.key = yaml['bitstamp']['id']
-    config.secret = yaml['bitstamp']['password']
-  end
 end

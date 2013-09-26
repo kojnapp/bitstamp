@@ -2,42 +2,56 @@ require 'spec_helper'
 
 describe Bitstamp do
 
-  it 'should raise if not properly configured' do
-    -> { Bitstamp.sanity_check! }.should raise_error
-  end
-
-  it 'should not raise if properly configured' do
-    Bitstamp.setup do |config|
-      config.key = 'test'
-      config.secret = 'test'
+  describe :sanity_check! do
+    context 'not properly configured' do
+      it { -> { Bitstamp.sanity_check! }.should raise_error }
     end
-
-    -> { Bitstamp.sanity_check! }.should_not raise_error
+    context 'properly configured' do
+      before {
+        Bitstamp.setup do |config|
+          config.key = 'test'
+          config.secret = 'test'
+          config.client_id = 'test'
+        end
+      }
+      it { -> { Bitstamp.sanity_check! }.should_not raise_error }
+    end
   end
 
-  it 'should have a orders helper method' do
-    Bitstamp.should respond_to :orders
+  describe :orders do
+    it { should respond_to :orders }
   end
 
-  it 'should have a ticker helper method' do
-    Bitstamp.ticker.should be_kind_of Bitstamp::Ticker
+  describe :ticket, vcr: {cassette_name: 'bitstamp/ticker'} do
+    subject { Bitstamp.ticker }
+    it { should be_kind_of Bitstamp::Ticker }
+    its(:high) { should == "124.90" }
+    its(:last) { should == "124.55" }
+    its(:timestamp) { should == "1380237724" }
+    its(:bid) { should == "124.55" }
+    its(:volume) { should == "7766.46908740" }
+    its(:low) { should == "123.00" }
+    its(:ask) { should == "124.56" }
   end
 
-  it 'should list information about your balance' do
-    read_bitstamp_yaml
-
-    Bitstamp.balance.should be_kind_of Hash
+  describe :balance, vcr: {cassette_name: 'bitstamp/balance'} do
+    context "configured" do
+      subject { Bitstamp.balance }
+      before { setup_bitstamp }
+      it { should == {"btc_reserved"=>"0", "fee"=>"0.4000", "btc_available"=>"0", "usd_reserved"=>"1.02", "btc_balance"=>"0", "usd_balance"=>"6953.07", "usd_available"=>"6952.05"} }
+    end
+    context "not configured" do
+      it { expect { Bitstamp.balance }.to raise_exception(Bitstamp::MissingConfigExeception, "Bitstamp Gem not properly configured") }
+    end
   end
 
-  it 'should have a order_book method' do
-    Bitstamp.order_book.should be_kind_of Hash
-  end
-
-  it 'should have bids and asks in the order_book' do
-    order_book = Bitstamp.order_book
-    order_book.should have_key("asks")
-    order_book.should have_key("bids")
-    order_book["asks"].should be_kind_of Array
-    order_book["bids"].should be_kind_of Array
+  describe :order_book, vcr: {cassette_name: 'bitstamp/order_book'} do
+    let(:order_book) { Bitstamp.order_book }
+    subject { order_book }
+    it { should be_kind_of Hash }
+    it { should have_key("asks") }
+    it { should have_key("bids") }
+    it { order_book["asks"].should be_kind_of Array }
+    it { order_book["bids"].should be_kind_of Array }
   end
 end
