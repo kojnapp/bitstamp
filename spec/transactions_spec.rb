@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Bitstamp::UserTransactions do
-  before { read_bitstamp_yaml }
+  before { setup_bitstamp }
 
   describe :all, vcr: {cassette_name: 'bitstamp/user_transactions/all'} do
     subject { Bitstamp.user_transactions.all }

@@ -34,7 +34,7 @@ describe Bitstamp do
   end
 
   describe :balance, vcr: {cassette_name: 'bitstamp/balance'} do
-    before { read_bitstamp_yaml }
+    before { setup_bitstamp }
     subject { Bitstamp.balance }
     it { should == {"btc_reserved"=>"0", "fee"=>"0.4000", "btc_available"=>"0", "usd_reserved"=>"0", "btc_balance"=>"0", "usd_balance"=>"6953.07", "usd_available"=>"6953.07"} }
   end

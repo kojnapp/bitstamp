@@ -8,7 +8,7 @@ RSpec.configure do |config|
   end
 end
 
-def read_bitstamp_yaml
+def setup_bitstamp
   Bitstamp.setup do |config|
     raise "You must set environment variable BITSTAMP_KEY and BITSTAMP_SECRET with your username and password to run specs." if ENV['BITSTAMP_KEY'].nil? or ENV['BITSTAMP_SECRET'].nil?
     config.key = ENV['BITSTAMP_KEY']
