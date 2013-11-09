@@ -41,6 +41,10 @@ module Bitstamp
     @@transactions ||= Bitstamp::UserTransactions.new
   end
 
+  def self.transactions
+    return Bitstamp::Transactions.from_api
+  end
+
   def self.balance
     self.sanity_check!
 

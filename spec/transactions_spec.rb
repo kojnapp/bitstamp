@@ -20,3 +20,13 @@ describe Bitstamp::UserTransactions do
   end
 
 end
+
+describe Bitstamp::Transactions do
+  before { setup_bitstamp }
+
+  describe :all, vcr:{cassette_name: 'bitstamp/transactions'} do
+    subject { Bitstamp.transactions }
+    it { should be_kind_of Array }
+  end
+
+end
