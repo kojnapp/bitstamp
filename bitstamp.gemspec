@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "bitstamp"
+  s.name = %q{bitstamp}
   s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Jeffrey Wilcke"]
-  s.date = "2013-09-26"
-  s.description = "Ruby API for use with bitstamp."
-  s.email = "stygeo@gmail.com"
+  s.authors = [%q{Jeffrey Wilcke}]
+  s.date = %q{2013-11-19}
+  s.description = %q{Ruby API for use with bitstamp.}
+  s.email = %q{stygeo@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.md"
@@ -43,6 +43,7 @@ Gem::Specification.new do |s|
     "spec/fixtures/vcr_cassettes/bitstamp/orders/buy.yml",
     "spec/fixtures/vcr_cassettes/bitstamp/orders/sell/failure.yml",
     "spec/fixtures/vcr_cassettes/bitstamp/ticker.yml",
+    "spec/fixtures/vcr_cassettes/bitstamp/transactions.yml",
     "spec/fixtures/vcr_cassettes/bitstamp/user_transactions/all.yml",
     "spec/orders_spec.rb",
     "spec/spec_helper.rb",
@@ -50,11 +51,11 @@ Gem::Specification.new do |s|
     "spec/support/vcr.rb",
     "spec/transactions_spec.rb"
   ]
-  s.homepage = "http://github.com/kojnapp/bitstamp"
-  s.licenses = ["MIT"]
-  s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.25"
-  s.summary = "Bitstamp Ruby API"
+  s.homepage = %q{http://github.com/kojnapp/bitstamp}
+  s.licenses = [%q{MIT}]
+  s.require_paths = [%q{lib}]
+  s.rubygems_version = %q{1.8.0}
+  s.summary = %q{Bitstamp Ruby API}
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
