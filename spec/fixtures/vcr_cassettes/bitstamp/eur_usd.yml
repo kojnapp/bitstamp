@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.bitstamp.net/api/eur_usd/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "RGF0ZQ==":
+      - !binary |-
+        U3VuLCAxMiBKYW4gMjAxNCAxNDoxMDo1MCBHTVQ=
+      !binary "U2VydmVy":
+      - !binary |-
+        QXBhY2hl
+      !binary "Q29udGVudC1MYW5ndWFnZQ==":
+      - !binary |-
+        ZW4=
+      !binary "RXhwaXJlcw==":
+      - !binary |-
+        U3VuLCAxMiBKYW4gMjAxNCAxNDoxMDo1MCBHTVQ=
+      !binary "VmFyeQ==":
+      - !binary |-
+        QWNjZXB0LUxhbmd1YWdl
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        bWF4LWFnZT0w
+      !binary "TGFzdC1Nb2RpZmllZA==":
+      - !binary |-
+        U3VuLCAxMiBKYW4gMjAxNCAxNDoxMDo1MCBHTVQ=
+      !binary "Q29ubmVjdGlvbg==":
+      - !binary |-
+        Y2xvc2U=
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbg==
+      !binary "U2V0LUNvb2tpZQ==":
+      - !binary |-
+        aW5jYXBfc2VzXzEwOF85OTAyNT1WUGtUSjN0R1lYUlFRUzVZMXJGL0FXcWkw
+        bElBQUFBQWxZTmNUODN4T1JDSXhNUzhiNnVETXc9PTsgcGF0aD0vOyBEb21h
+        aW49LmJpdHN0YW1wLm5ldA==
+      - !binary |-
+        bmxiaV85OTAyNT1SMWp5ZUd3ZVd3UDhhYjNuSXRvYjhnQUFBQUIrQkFCcUV4
+        ellIRStZSms1MGpGaGU7IHBhdGg9LzsgRG9tYWluPS5iaXRzdGFtcC5uZXQ=
+      - !binary |-
+        dmlzaWRfaW5jYXBfOTkwMjU9a01EVmJQZjRUL3lMeEszdlRGa1E5bXFpMGxJ
+        QUFBQUFRVUlQQUFBQUFBRE8vS3c5MC9VSDBPN3ExbHRVLy92QzsgZXhwaXJl
+        cz1Nb24sIDExIEphbiAyMDE2IDE4OjAxOjA0IEdNVDsgcGF0aD0vOyBEb21h
+        aW49LmJpdHN0YW1wLm5ldA==
+      !binary "WC1JaW5mbw==":
+      - !binary |-
+        NS0xNzkyMTM3NzAtMTc5MjEzODk2IE5OTlkgQ1QoMjggMzAgMCkgUlQoMTM4
+        OTUzNTg1MDQyNiAxOTYpIHEoMCAwIDAgMCkgcigwIDEpIFU0
+      !binary "WC1DZG4=":
+      - !binary |-
+        SW5jYXBzdWxh
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJzZWxsIjogIjEuMzU3OSIsICJidXkiOiAiMS4zNjkwIn0=
+    http_version: 
+  recorded_at: Sun, 12 Jan 2014 14:10:51 GMT
+recorded_with: VCR 2.6.0
