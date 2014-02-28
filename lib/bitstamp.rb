@@ -56,7 +56,7 @@ module Bitstamp
   end
 
   def self.order_book
-    return JSON.parse Bitstamp::Net.get('/order_book/').body_str
+    return JSON.parse Bitstamp::Net.get('/order_book').body_str
   end
 
   def self.setup
