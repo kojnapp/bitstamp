@@ -16,6 +16,7 @@ module Bitstamp
       end
 
       c.post_body = options.to_query
+      c.cookies = Bitstamp.cookies if Bitstamp.cookies
 
       c.http(verb)
 
