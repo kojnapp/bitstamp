@@ -34,6 +34,13 @@ describe Bitstamp do
     its(:ask) { should == "124.56" }
   end
 
+  describe :eur_usd, vcr: {cassette_name: 'bitstamp/eur_usd'} do
+    subject { Bitstamp.eur_usd }
+    it { should be_kind_of Bitstamp::EurUsd }
+    its(:sell) { should == "1.3579" }
+    its(:buy) { should == "1.3690" }
+  end
+
   describe :balance, vcr: {cassette_name: 'bitstamp/balance'} do
     context "configured" do
       subject { Bitstamp.balance }

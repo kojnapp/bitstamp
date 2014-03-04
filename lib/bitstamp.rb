@@ -11,6 +11,7 @@ require 'bitstamp/model'
 
 require 'bitstamp/orders'
 require 'bitstamp/transactions'
+require 'bitstamp/eur_usd'
 require 'bitstamp/ticker'
 
 String.send(:include, ActiveSupport::Inflector)
@@ -21,7 +22,7 @@ module Bitstamp
 
   # Bitstamp secret
   mattr_accessor :secret
-  
+
   # Bitstamp client ID
   mattr_accessor :client_id
 
@@ -55,6 +56,10 @@ module Bitstamp
     return Bitstamp::Ticker.from_api
   end
 
+  def self.eur_usd
+    return Bitstamp::EurUsd.from_api
+  end
+
   def self.order_book
     return JSON.parse Bitstamp::Net.get('/order_book/').body_str
   end
@@ -62,7 +67,7 @@ module Bitstamp
   def self.setup
     yield self
   end
-  
+
   def self.configured?
     self.key && self.secret && self.client_id
   end

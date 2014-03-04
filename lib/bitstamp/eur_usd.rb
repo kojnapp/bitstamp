@@ -1,9 +1,9 @@
 module Bitstamp
-  class Ticker < Bitstamp::Model
-    attr_accessor :last, :high, :low, :volume, :bid, :ask, :timestamp, :vwap
+  class EurUsd < Bitstamp::Model
+    attr_accessor :sell, :buy
 
     def self.from_api
-      Bitstamp::Helper.parse_object!(Bitstamp::Net.get('/ticker').body_str, self)
+      Bitstamp::Helper.parse_object!(Bitstamp::Net.get('/eur_usd').body_str, self)
     end
 
     def self.method_missing method, *args
