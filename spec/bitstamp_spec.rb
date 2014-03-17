@@ -54,4 +54,22 @@ describe Bitstamp do
     it { order_book["asks"].should be_kind_of Array }
     it { order_book["bids"].should be_kind_of Array }
   end
+
+  describe :withdraw_bitcoins do
+    before {setup_bitstamp}
+    context "Failed to supply correct arguments", vcr: {cassette_name: 'bitstamp/withdraw_bitcoins/wrong_arguments'} do
+      subject { Bitstamp.withdraw_bitcoins(amount:100) }
+      #its(:error) { should == "Required parameters not supplied, :amount, :address" }
+    end
+    context "Failed to withdraw bitcoins", vcr: {cassette_name: 'bitstamp/withdraw_bitcoins/failure'} do
+      subject { Bitstamp.withdraw_bitcoins(:amount=>100, :address=>"17Vr8d1yWrA226QNYZLDwaG4vDMUEaT9t5") }
+      it {should == {"error"=>{"amount"=>["You have only 0 BTC available. Check your account balance for details."]}}}
+      #its(:error) { should == "Required parameters not supplied, :amount, :address" }
+    end
+    # context "succesfully withdrew bitcoins", vcr: {cassette_name: 'bitstamp/withdraw_bitcoins/success'} do
+    #   subject { Bitstamp.withdraw_bitcoins(:amount=>0.04976353, :address=>"17Vr8d1yWrA226QNYZLDwaG4vDMUEaT9t5") }
+    #   it {should =='true'}
+    #   #its(:error) { should == "Required parameters not supplied, :amount, :address" }
+    # end
+  end
 end

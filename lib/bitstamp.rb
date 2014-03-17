@@ -21,7 +21,7 @@ module Bitstamp
 
   # Bitstamp secret
   mattr_accessor :secret
-  
+
   # Bitstamp client ID
   mattr_accessor :client_id
 
@@ -51,6 +51,19 @@ module Bitstamp
     JSON.parse Bitstamp::Net.post('/balance').body_str
   end
 
+  def self.withdraw_bitcoins(options = {})
+    self.sanity_check!
+    if options[:amount].nil? || options[:address].nil?
+      raise MissingConfigExeception.new("Required parameters not supplied, :amount, :address")
+    end
+    if Bitstamp::Net.post('/bitcoin_withdrawal',options).body_str != 'true'
+      return JSON.parse Bitstamp::Net.post('/bitcoin_withdrawal',options).body_str
+    else
+      return Bitstamp::Net.post('/bitcoin_withdrawal',options).body_str
+    end
+
+  end
+
   def self.ticker
     return Bitstamp::Ticker.from_api
   end
@@ -62,7 +75,7 @@ module Bitstamp
   def self.setup
     yield self
   end
-  
+
   def self.configured?
     self.key && self.secret && self.client_id
   end
