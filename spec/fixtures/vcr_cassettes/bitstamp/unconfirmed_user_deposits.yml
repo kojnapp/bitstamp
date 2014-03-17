@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.bitstamp.net/api/unconfirmed_btc/
+    body:
+      encoding: US-ASCII
+      string: key=BITSTAMP_KEY&nonce=13950737097883&signature=EA9ACED64B8F902D9AD63CB7C4D4DF87385A8F4925DCB0445C6A8B75099BE23B
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "RGF0ZQ==":
+      - !binary |-
+        TW9uLCAxNyBNYXIgMjAxNCAxNjoyODozMCBHTVQ=
+      !binary "U2VydmVy":
+      - !binary |-
+        QXBhY2hl
+      !binary "Q29udGVudC1MYW5ndWFnZQ==":
+      - !binary |-
+        ZW4=
+      !binary "RXhwaXJlcw==":
+      - !binary |-
+        TW9uLCAxNyBNYXIgMjAxNCAxNjoyODozMCBHTVQ=
+      !binary "VmFyeQ==":
+      - !binary |-
+        QWNjZXB0LUxhbmd1YWdl
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        bWF4LWFnZT0w
+      !binary "TGFzdC1Nb2RpZmllZA==":
+      - !binary |-
+        TW9uLCAxNyBNYXIgMjAxNCAxNjoyODozMCBHTVQ=
+      !binary "Q29ubmVjdGlvbg==":
+      - !binary |-
+        Y2xvc2U=
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbg==
+      !binary "U2V0LUNvb2tpZQ==":
+      - !binary |-
+        aW5jYXBfc2VzXzQ3Xzk5MDI1PWx0SGxLa3RxMnl1KzZBbTJTZnVtQUswaUox
+        TUFBQUFBZ0dGV1FRYWFENC90TCt1MlNEdGdvUT09OyBwYXRoPS87IERvbWFp
+        bj0uYml0c3RhbXAubmV0
+      - !binary |-
+        bmxiaV85OTAyNT1nSlJSTHZodVpXOE9KdllsK2RsNnZRQUFBQUNNV1hLZGdR
+        RjNSbHhYT2ppcmVZRTg7IHBhdGg9LzsgRG9tYWluPS5iaXRzdGFtcC5uZXQ=
+      - !binary |-
+        dmlzaWRfaW5jYXBfOTkwMjU9Wkt5c1dqYUJRMkczdU5zamplTGdkcTBpSjFN
+        QUFBQUFRVUlQQUFBQUFBQ0xHK2JlYUlRRVRVL2w0VEdTQXRWVzsgZXhwaXJl
+        cz1XZWQsIDE2IE1hciAyMDE2IDE0OjE3OjAzIEdNVDsgcGF0aD0vOyBEb21h
+        aW49LmJpdHN0YW1wLm5ldA==
+      !binary "WC1JaW5mbw==":
+      - !binary |-
+        NS05NTM1NjgyNC05NTM1Njg5NyBOTk5ZIENUKDQ0IDM3IDApIFJUKDEzOTUw
+        NzM3MDk0MDAgMjMwKSBxKDAgMCAxIDApIHIoMSAyKSBVNg==
+      !binary "WC1DZG4=":
+      - !binary |-
+        SW5jYXBzdWxh
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W10=
+    http_version: 
+  recorded_at: Mon, 17 Mar 2014 16:28:30 GMT
+recorded_with: VCR 2.6.0

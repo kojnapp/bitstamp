@@ -72,4 +72,18 @@ describe Bitstamp do
     #   #its(:error) { should == "Required parameters not supplied, :amount, :address" }
     # end
   end
+  describe :unconfirmed_user_deposits, vcr: {cassette_name: 'bitstamp/unconfirmed_user_deposits'}  do
+    before {setup_bitstamp}
+    subject { Bitstamp.unconfirmed_user_deposits }
+    it {should be_kind_of Array}
+
+  end
+  #
+  # Works but for privacy reasons I dont want to include the cassette
+  #
+  # describe :bitcoin_deposit_address, vcr: {cassette_name: 'bitstamp/bitcoin_deposit_address'} do
+  #   before {setup_bitstamp}
+  #   subject {Bitstamp.bitcoin_deposit_address}
+  #   #it {should match /^[13][a-zA-Z0-9]{26,33}$/} TODO:fix this spec
+  # end
 end

@@ -56,12 +56,22 @@ module Bitstamp
     if options[:amount].nil? || options[:address].nil?
       raise MissingConfigExeception.new("Required parameters not supplied, :amount, :address")
     end
-    if Bitstamp::Net.post('/bitcoin_withdrawal',options).body_str != 'true'
-      return JSON.parse Bitstamp::Net.post('/bitcoin_withdrawal',options).body_str
+    response_body = Bitstamp::Net.post('/bitcoin_withdrawal',options).body_str
+    if response_body != 'true'
+      return JSON.parse response_body
     else
-      return Bitstamp::Net.post('/bitcoin_withdrawal',options).body_str
+      return response_body
     end
+  end
+  def self.bitcoin_deposit_address
+    # returns the deposit address
+    self.sanity_check!
+    return Bitstamp::Net.post('/bitcoin_deposit_address').body_str
+  end
 
+  def self.unconfirmed_user_deposits
+    self.sanity_check!
+    return JSON.parse Bitstamp::Net::post("/unconfirmed_btc").body_str
   end
 
   def self.ticker
