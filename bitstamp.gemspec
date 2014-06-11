@@ -64,7 +64,7 @@ Gem::Specification.new do |s|
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<activemodel>, [">= 3.1"])
       s.add_runtime_dependency(%q<activesupport>, [">= 3.1"])
-      s.add_runtime_dependency(%q<curb>, ["> 0.8.1"])
+      s.add_runtime_dependency(%q<rest_client>, ["> 1.7.3"])
       s.add_runtime_dependency(%q<ruby-hmac>, ["= 0.4.0"])
       s.add_development_dependency(%q<rspec>, [">= 0"])
       s.add_development_dependency(%q<rdoc>, ["~> 3.12"])
@@ -73,7 +73,7 @@ Gem::Specification.new do |s|
     else
       s.add_dependency(%q<activemodel>, [">= 3.1"])
       s.add_dependency(%q<activesupport>, [">= 3.1"])
-      s.add_dependency(%q<curb>, ["> 0.8.1"])
+      s.add_dependency(%q<rest_client>, ["> 1.7.3"])
       s.add_dependency(%q<ruby-hmac>, ["= 0.4.0"])
       s.add_dependency(%q<rspec>, [">= 0"])
       s.add_dependency(%q<rdoc>, ["~> 3.12"])
@@ -83,7 +83,7 @@ Gem::Specification.new do |s|
   else
     s.add_dependency(%q<activemodel>, [">= 3.1"])
     s.add_dependency(%q<activesupport>, [">= 3.1"])
-    s.add_dependency(%q<curb>, ["> 0.8.1"])
+    s.add_dependency(%q<rest_client>, ["> 1.7.3"])
     s.add_dependency(%q<ruby-hmac>, ["= 0.4.0"])
     s.add_dependency(%q<rspec>, [">= 0"])
     s.add_dependency(%q<rdoc>, ["~> 3.12"])
