@@ -1,12 +1,12 @@
 module Bitstamp
   class Orders < Bitstamp::Collection
     def all(options = {})
-      Bitstamp::Helper.parse_objects! Bitstamp::Net::post('/open_orders').body_str, self.model
+      Bitstamp::Helper.parse_objects! Bitstamp::Net::post('/open_orders').to_str, self.model
     end
 
     def create(options = {})
       path = (options[:type] == Bitstamp::Order::SELL ? "/sell" : "/buy")
-      Bitstamp::Helper.parse_object! Bitstamp::Net::post(path, options).body_str, self.model
+      Bitstamp::Helper.parse_object! Bitstamp::Net::post(path, options).to_str, self.model
     end
 
     def sell(options = {})
@@ -35,7 +35,7 @@ module Bitstamp
     attr_accessor :error, :message
 
     def cancel!
-      Bitstamp::Net::post('/cancel_order', {id: self.id}).body_str
+      Bitstamp::Net::post('/cancel_order', {id: self.id}).to_str
     end
   end
 end

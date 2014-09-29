@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.bitstamp.net/api/order_book//
+    uri: https://www.bitstamp.net/api/order_book/
     body:
       encoding: US-ASCII
       string: ''
