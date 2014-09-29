@@ -1,0 +1,145 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.bitstamp.net/api/bitcoin_withdrawal/
+    body:
+      encoding: US-ASCII
+      string: address=17Vr8d1yWrA226QNYZLDwaG4vDMUEaT9t5&amount=100&key=BITSTAMP_KEY&nonce=13950683899510&signature=0644D03D0D4FF3DEA6C2A4DF55C371930A2BC9BCE5D56DD9C151AE2014E2F0EF
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "RGF0ZQ==":
+      - !binary |-
+        TW9uLCAxNyBNYXIgMjAxNCAxNDo1OTo1MCBHTVQ=
+      !binary "U2VydmVy":
+      - !binary |-
+        QXBhY2hl
+      !binary "Q29udGVudC1MYW5ndWFnZQ==":
+      - !binary |-
+        ZW4=
+      !binary "RXhwaXJlcw==":
+      - !binary |-
+        TW9uLCAxNyBNYXIgMjAxNCAxNDo1OTo1MSBHTVQ=
+      !binary "VmFyeQ==":
+      - !binary |-
+        QWNjZXB0LUxhbmd1YWdl
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        bWF4LWFnZT0w
+      !binary "TGFzdC1Nb2RpZmllZA==":
+      - !binary |-
+        TW9uLCAxNyBNYXIgMjAxNCAxNDo1OTo1MSBHTVQ=
+      !binary "Q29ubmVjdGlvbg==":
+      - !binary |-
+        Y2xvc2U=
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbg==
+      !binary "U2V0LUNvb2tpZQ==":
+      - !binary |-
+        aW5jYXBfc2VzXzQ3Xzk5MDI1PThwUm5iQUdWZTFPNkpPaTFTZnVtQU9ZTkox
+        TUFBQUFBQXFtSkQ1YWpxZkJXQjB4dDBzZlBKZz09OyBwYXRoPS87IERvbWFp
+        bj0uYml0c3RhbXAubmV0
+      - !binary |-
+        bmxiaV85OTAyNT1zSDhvYitnYmtoOFJ5cFByK2RsNnZRQUFBQUFhQXUxMWNL
+        T0xodkw1bDFaYnpUZmE7IHBhdGg9LzsgRG9tYWluPS5iaXRzdGFtcC5uZXQ=
+      - !binary |-
+        dmlzaWRfaW5jYXBfOTkwMjU9L0VpSGtHSnZUQnVzTTBCMnJZMlE4T1lOSjFN
+        QUFBQUFRVUlQQUFBQUFBRE1EeEg1VE8ydGVENmlrcmR6b3RqYTsgZXhwaXJl
+        cz1XZWQsIDE2IE1hciAyMDE2IDE0OjE3OjAzIEdNVDsgcGF0aD0vOyBEb21h
+        aW49LmJpdHN0YW1wLm5ldA==
+      !binary "WC1JaW5mbw==":
+      - !binary |-
+        NS05Mzg1NjE0MC05Mzg1NjIxMiBOTk5ZIENUKDM1IDM1IDApIFJUKDEzOTUw
+        NjgzODk5MDkgMjY2KSBxKDAgMCAxIC0xKSByKDEgMikgVTY=
+      !binary "WC1DZG4=":
+      - !binary |-
+        SW5jYXBzdWxh
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJlcnJvciI6IHsiYW1vdW50IjogWyJZb3UgaGF2ZSBvbmx5IDAgQlRDIGF2
+        YWlsYWJsZS4gQ2hlY2sgeW91ciBhY2NvdW50IGJhbGFuY2UgZm9yIGRldGFp
+        bHMuIl19fQ==
+    http_version: 
+  recorded_at: Mon, 17 Mar 2014 14:59:50 GMT
+- request:
+    method: post
+    uri: https://www.bitstamp.net/api/bitcoin_withdrawal/
+    body:
+      encoding: US-ASCII
+      string: address=17Vr8d1yWrA226QNYZLDwaG4vDMUEaT9t5&amount=100&key=BITSTAMP_KEY&nonce=13950683908946&signature=3F64B8F96F1CE4CCC76271862FED88A2DEC018D5B54CBC46FDF6521D5C2D4D14
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "RGF0ZQ==":
+      - !binary |-
+        TW9uLCAxNyBNYXIgMjAxNCAxNDo1OTo1MSBHTVQ=
+      !binary "U2VydmVy":
+      - !binary |-
+        QXBhY2hl
+      !binary "Q29udGVudC1MYW5ndWFnZQ==":
+      - !binary |-
+        ZW4=
+      !binary "RXhwaXJlcw==":
+      - !binary |-
+        TW9uLCAxNyBNYXIgMjAxNCAxNDo1OTo1MSBHTVQ=
+      !binary "VmFyeQ==":
+      - !binary |-
+        QWNjZXB0LUxhbmd1YWdl
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        bWF4LWFnZT0w
+      !binary "TGFzdC1Nb2RpZmllZA==":
+      - !binary |-
+        TW9uLCAxNyBNYXIgMjAxNCAxNDo1OTo1MSBHTVQ=
+      !binary "Q29ubmVjdGlvbg==":
+      - !binary |-
+        Y2xvc2U=
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbg==
+      !binary "U2V0LUNvb2tpZQ==":
+      - !binary |-
+        aW5jYXBfc2VzXzQ3Xzk5MDI1PSswY3pOVjJIU2kycEplaTFTZnVtQU9ZTkox
+        TUFBQUFBcTZzbkV2Si8rMTRvNkNXU2FwQmdXUT09OyBwYXRoPS87IERvbWFp
+        bj0uYml0c3RhbXAubmV0
+      - !binary |-
+        bmxiaV85OTAyNT1YY2ZXWmJhaHBuWit1WlFjK2RsNnZRQUFBQUJJRE1LNk1k
+        Q2RZNURHc3lNNVE2akE7IHBhdGg9LzsgRG9tYWluPS5iaXRzdGFtcC5uZXQ=
+      - !binary |-
+        dmlzaWRfaW5jYXBfOTkwMjU9T2N1S085a09RaCsvYlVOVUlVSWF5dVlOSjFN
+        QUFBQUFRVUlQQUFBQUFBQVM5TE9rSFp2dHQ1UW1HSXVyQjNzbDsgZXhwaXJl
+        cz1XZWQsIDE2IE1hciAyMDE2IDE0OjE3OjAwIEdNVDsgcGF0aD0vOyBEb21h
+        aW49LmJpdHN0YW1wLm5ldA==
+      !binary "WC1JaW5mbw==":
+      - !binary |-
+        Ni0xNTU2MjAxOTktMTU1NjIwMjc2IE5OTlkgQ1QoMzQgMzYgMCkgUlQoMTM5
+        NTA2ODM5MDQwNiAxODkpIHEoMCAwIDEgLTEpIHIoMSAyKSBVNg==
+      !binary "WC1DZG4=":
+      - !binary |-
+        SW5jYXBzdWxh
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJlcnJvciI6IHsiYW1vdW50IjogWyJZb3UgaGF2ZSBvbmx5IDAgQlRDIGF2
+        YWlsYWJsZS4gQ2hlY2sgeW91ciBhY2NvdW50IGJhbGFuY2UgZm9yIGRldGFp
+        bHMuIl19fQ==
+    http_version: 
+  recorded_at: Mon, 17 Mar 2014 14:59:51 GMT
+recorded_with: VCR 2.6.0

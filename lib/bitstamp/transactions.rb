@@ -34,4 +34,6 @@ module Bitstamp
     end
 
   end
+
+
 end

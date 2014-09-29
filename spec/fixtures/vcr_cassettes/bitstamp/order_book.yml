@@ -1,7 +1,7 @@
 ---
 http_interactions:
 - request:
-    method: post
+    method: get
     uri: https://www.bitstamp.net/api/order_book/
     body:
       encoding: US-ASCII
@@ -1905,6 +1905,6 @@ http_interactions:
         MC4wMCIsICIxLjk0MDExNDc1Il0sIFsiNTAwMDAuMDAiLCAiMC4wMTAwMDAw
         MCJdLCBbIjYzMDAwLjAwIiwgIjEuMDAwMDAwMDAiXSwgWyI5MDAwMC4wMCIs
         ICIwLjA1MDAwMDAwIl0sIFsiOTk5OTkuMDAiLCAiMC4xMzUwMDAwMCJdXX0=
-    http_version: 
+    http_version:
   recorded_at: Thu, 26 Sep 2013 23:24:46 GMT
 recorded_with: VCR 2.6.0
