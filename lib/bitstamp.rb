@@ -1,7 +1,7 @@
 require 'active_support/core_ext'
 require 'active_support/inflector'
 require 'active_model'
-require 'curb'
+require 'rest_client'
 require 'hmac-sha2'
 
 require 'bitstamp/net'
@@ -48,7 +48,7 @@ module Bitstamp
   def self.balance
     self.sanity_check!
 
-    JSON.parse Bitstamp::Net.post('/balance').body_str
+    JSON.parse Bitstamp::Net.post('/balance').to_str
   end
 
   def self.withdraw_bitcoins(options = {})
@@ -79,7 +79,7 @@ module Bitstamp
   end
 
   def self.order_book
-    return JSON.parse Bitstamp::Net.get('/order_book/').body_str
+    return JSON.parse Bitstamp::Net.get('/order_book').to_str
   end
 
   def self.setup
