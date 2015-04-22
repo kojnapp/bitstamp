@@ -4,7 +4,7 @@ module Bitstamp
       # Default time delta to an hour
       options[:timedelta] = "3600" unless options[:timedelta]
 
-      Bitstamp::Helper.parse_objects! Bitstamp::Net::post("/user_transactions", options).body_str, self.model
+      Bitstamp::Helper.parse_objects! Bitstamp::Net::post("/user_transactions", options).to_str, self.model
     end
 
     def find(order_id)
@@ -30,8 +30,10 @@ module Bitstamp
     attr_accessor :date, :price, :tid, :amount, :type
 
     def self.from_api
-      Bitstamp::Helper.parse_objects! Bitstamp::Net::get("/transactions").body_str, self
+      Bitstamp::Helper.parse_objects! Bitstamp::Net::get("/transactions").to_str, self
     end
 
   end
+
+
 end

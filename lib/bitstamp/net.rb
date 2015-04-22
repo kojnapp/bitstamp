@@ -4,47 +4,30 @@ module Bitstamp
       return "https://www.bitstamp.net/api#{path}/"
     end
 
-    def self.curl(verb, path, options={})
-      verb = verb.upcase.to_sym
-
-      c = Curl::Easy.new(self.to_uri(path))
-
-      if Bitstamp.configured?
-        options[:key] = Bitstamp.key
-        options[:nonce] = (Time.now.to_f * 100000).round.to_s
-        options[:signature] = HMAC::SHA256.hexdigest(Bitstamp.secret, options[:nonce]+Bitstamp.client_id+options[:key]).upcase
-      end
-
-      c.post_body = options.to_query
-      c.cookies = Bitstamp.cookies if Bitstamp.cookies
-
-      c.http(verb)
-
-      return c
-    end
-
     def self.get(path, options={})
-      request = self.curl(:GET, path, options)
-
-      return request
+      RestClient.get(self.to_uri(path))
     end
 
     def self.post(path, options={})
-      request = self.curl(:POST, path, options)
-
-      return request
+      RestClient.post(self.to_uri(path), self.bitstamp_options(options))
     end
 
     def self.patch(path, options={})
-      request = self.curl(:PATCH, path, options)
-
-      return request
+      RestClient.put(self.to_uri(path), self.bitstamp_options(options))
     end
 
     def self.delete(path, options={})
-      request = self.curl(:DELETE, path, options)
+      RestClient.delete(self.to_uri(path), self.bitstamp_options(options))
+    end
 
-      return request
+    def self.bitstamp_options(options={})
+      if Bitstamp.configured?
+        options[:key] = Bitstamp.key
+        options[:nonce] = (Time.now.to_f*10000).to_i.to_s
+        options[:signature] = HMAC::SHA256.hexdigest(Bitstamp.secret, options[:nonce]+Bitstamp.client_id.to_s+options[:key]).upcase
+      end
+
+      options
     end
   end
 end
