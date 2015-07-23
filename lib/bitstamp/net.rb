@@ -1,3 +1,4 @@
+require 'securerandom'
 module Bitstamp
   module Net
     def self.to_uri(path)
@@ -5,7 +6,7 @@ module Bitstamp
     end
 
     def self.get(path, options={})
-      RestClient.get(self.to_uri(path))
+      RestClient.get(self.to_uri(path) + "?#{SecureRandom.urlsafe_base64(5)}")
     end
 
     def self.post(path, options={})
