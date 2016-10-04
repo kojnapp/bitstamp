@@ -1,23 +1,23 @@
 module Bitstamp
   module Net
     def self.to_uri(path)
-      return "https://www.bitstamp.net/api#{path}/"
+      "https://www.bitstamp.net/api#{path}/"
     end
 
     def self.get(path, options={})
-      RestClient.get(self.to_uri(path))
+      rest path
     end
 
     def self.post(path, options={})
-      RestClient.post(self.to_uri(path), self.bitstamp_options(options))
+      rest path, :post, bitstamp_options(options)
     end
 
     def self.patch(path, options={})
-      RestClient.put(self.to_uri(path), self.bitstamp_options(options))
+      rest path, :put, bitstamp_options(options)
     end
 
     def self.delete(path, options={})
-      RestClient.delete(self.to_uri(path), self.bitstamp_options(options))
+      rest path, :delete, bitstamp_options(options)
     end
 
     def self.bitstamp_options(options={})
@@ -28,6 +28,15 @@ module Bitstamp
       end
 
       options
+    end
+
+    def self.rest(path, method=:get, options={})
+      RestClient::Request.execute(
+        method: method,
+        url: to_uri(path),
+        payload: options,
+        ssl_version: 'SSLv23'
+      )
     end
   end
 end
