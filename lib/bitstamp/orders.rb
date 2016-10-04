@@ -25,6 +25,10 @@ module Bitstamp
 
       return all[index] if index
     end
+
+    def cancel_all
+      Bitstamp::Net::post('/cancel_all_orders').to_str
+    end
   end
 
   class Order < Bitstamp::Model
