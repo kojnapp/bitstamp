@@ -1,3 +1,4 @@
+require 'securerandom'
 module Bitstamp
   module Net
     def self.to_uri(path)
@@ -5,7 +6,7 @@ module Bitstamp
     end
 
     def self.get(path, options={})
-      RestClient.get(self.to_uri(path))
+      RestClient.get(self.to_uri(path) + "?#{SecureRandom.urlsafe_base64(5)}")
     end
 
     def self.post(path, options={})
@@ -23,7 +24,7 @@ module Bitstamp
     def self.bitstamp_options(options={})
       if Bitstamp.configured?
         options[:key] = Bitstamp.key
-        options[:nonce] = (Time.now.to_f*10000).to_i.to_s
+        options[:nonce] = (Time.now.to_f*100000).to_i.to_s
         options[:signature] = HMAC::SHA256.hexdigest(Bitstamp.secret, options[:nonce]+Bitstamp.client_id.to_s+options[:key]).upcase
       end
 

@@ -25,6 +25,9 @@ module Bitstamp
   # Bitstamp client ID
   mattr_accessor :client_id
 
+  # Optional cookies, in case we need to prove ourselves to incapsula.
+  mattr_accessor :cookies
+
   # Currency
   mattr_accessor :currency
   @@currency = :usd
