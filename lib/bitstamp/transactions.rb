@@ -3,8 +3,8 @@ module Bitstamp
     def all(options = {})
       # Default time delta to an hour
       options[:timedelta] = "3600" unless options[:timedelta]
-
-      Bitstamp::Helper.parse_objects! Bitstamp::Net::post("/user_transactions", options).to_str, self.model
+      path = options[:currency_pair] ? "/v2/user_transactions/#{options[:currency_pair]}" : "/v2/user_transactions"
+      Bitstamp::Helper.parse_objects! Bitstamp::Net::post(path, options).to_str, self.model
     end
 
     def find(order_id)
@@ -29,11 +29,8 @@ module Bitstamp
   class Transactions < Bitstamp::Model
     attr_accessor :date, :price, :tid, :amount
 
-    def self.from_api
-      Bitstamp::Helper.parse_objects! Bitstamp::Net::get("/transactions").to_str, self
+    def self.from_api(currency_pair)
+      Bitstamp::Helper.parse_objects! Bitstamp::Net::get("/v2/transactions/#{currency_pair}").to_str, self
     end
-
   end
-
-
 end

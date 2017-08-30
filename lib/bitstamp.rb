@@ -41,14 +41,14 @@ module Bitstamp
     @@transactions ||= Bitstamp::UserTransactions.new
   end
 
-  def self.transactions
-    return Bitstamp::Transactions.from_api
+  def self.transactions(currency_pair = "btcusd")
+    return Bitstamp::Transactions.from_api(currency_pair)
   end
 
-  def self.balance
+  def self.balance(currency_pair)
     self.sanity_check!
-
-    JSON.parse Bitstamp::Net.post('/balance').to_str
+    path = currency_pair ? "/v2/balance/#{currency_pair}" : "/v2/balance"
+    JSON.parse Bitstamp::Net.post(path).to_str
   end
 
   def self.withdraw_bitcoins(options = {})
@@ -74,12 +74,12 @@ module Bitstamp
     return JSON.parse Bitstamp::Net::post("/unconfirmed_btc").body_str
   end
 
-  def self.ticker
-    return Bitstamp::Ticker.from_api
+  def self.ticker(currency_pair = "btcusd")
+    return Bitstamp::Ticker.from_api(currency_pair)
   end
 
-  def self.order_book
-    return JSON.parse Bitstamp::Net.get('/order_book').to_str
+  def self.order_book(currency_pair = "btcusd")
+    return JSON.parse Bitstamp::Net.get("/v2/order_book/#{currency_pair}").to_str
   end
 
   def self.setup
