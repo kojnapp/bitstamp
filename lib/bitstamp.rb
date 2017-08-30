@@ -45,7 +45,7 @@ module Bitstamp
     return Bitstamp::Transactions.from_api(currency_pair)
   end
 
-  def self.balance(currency_pair)
+  def self.balance(currency_pair = "btcusd")
     self.sanity_check!
     path = currency_pair ? "/v2/balance/#{currency_pair}" : "/v2/balance"
     JSON.parse Bitstamp::Net.post(path).to_str
