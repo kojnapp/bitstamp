@@ -1,16 +1,16 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    activemodel (5.1.4)
-      activesupport (= 5.1.4)
-    activesupport (5.1.4)
-      concurrent-ruby (~> 1.0, >= 1.0.2)
+    activemodel (4.2.9)
+      activesupport (= 4.2.9)
+      builder (~> 3.1)
+    activesupport (4.2.9)
       i18n (~> 0.7)
       minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
     builder (3.2.3)
-    concurrent-ruby (1.0.5)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     descendants_tracker (0.0.4)
@@ -106,8 +106,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activemodel (>= 3.1)
-  activesupport (>= 3.1)
+  activemodel (~> 4.2)
+  activesupport (~> 4.2)
   bundler
   jeweler (~> 2.3.7)
   rdoc (~> 3.12)
