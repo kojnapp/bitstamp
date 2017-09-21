@@ -6,7 +6,7 @@ source "http://rubygems.org"
 #   gem "activesupport", ">= 2.3.5"
 gem "activemodel", "~> 4.2"
 gem "activesupport", "~> 4.2"
-gem "rest-client", "2.0.2"
+gem "rest-client", "~> 1.8"
 gem "ruby-hmac", "0.4.0"
 
 # Add dependencies to develop your gem here.

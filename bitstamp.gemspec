@@ -66,7 +66,7 @@ Gem::Specification.new do |s|
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<activemodel>.freeze, ["~> 4.2"])
       s.add_runtime_dependency(%q<activesupport>.freeze, ["~> 4.2"])
-      s.add_runtime_dependency(%q<rest-client>.freeze, ["= 2.0.2"])
+      s.add_runtime_dependency(%q<rest-client>.freeze, ["~> 1.8"])
       s.add_runtime_dependency(%q<ruby-hmac>.freeze, ["= 0.4.0"])
       s.add_development_dependency(%q<rspec>.freeze, [">= 0"])
       s.add_development_dependency(%q<rdoc>.freeze, ["~> 3.12"])
@@ -75,7 +75,7 @@ Gem::Specification.new do |s|
     else
       s.add_dependency(%q<activemodel>.freeze, ["~> 4.2"])
       s.add_dependency(%q<activesupport>.freeze, ["~> 4.2"])
-      s.add_dependency(%q<rest-client>.freeze, ["= 2.0.2"])
+      s.add_dependency(%q<rest-client>.freeze, ["~> 1.8"])
       s.add_dependency(%q<ruby-hmac>.freeze, ["= 0.4.0"])
       s.add_dependency(%q<rspec>.freeze, [">= 0"])
       s.add_dependency(%q<rdoc>.freeze, ["~> 3.12"])
@@ -85,7 +85,7 @@ Gem::Specification.new do |s|
   else
     s.add_dependency(%q<activemodel>.freeze, ["~> 4.2"])
     s.add_dependency(%q<activesupport>.freeze, ["~> 4.2"])
-    s.add_dependency(%q<rest-client>.freeze, ["= 2.0.2"])
+    s.add_dependency(%q<rest-client>.freeze, ["~> 1.8"])
     s.add_dependency(%q<ruby-hmac>.freeze, ["= 0.4.0"])
     s.add_dependency(%q<rspec>.freeze, [">= 0"])
     s.add_dependency(%q<rdoc>.freeze, ["~> 3.12"])

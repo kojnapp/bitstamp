@@ -67,10 +67,10 @@ GEM
     rake (12.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
-    rest-client (2.0.2)
+    rest-client (1.8.0)
       http-cookie (>= 1.0.2, < 2.0)
-      mime-types (>= 1.16, < 4.0)
-      netrc (~> 0.8)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     rspec (3.6.0)
       rspec-core (~> 3.6.0)
       rspec-expectations (~> 3.6.0)
@@ -111,7 +111,7 @@ DEPENDENCIES
   bundler
   jeweler (~> 2.3.7)
   rdoc (~> 3.12)
-  rest-client (= 2.0.2)
+  rest-client (~> 1.8)
   rspec
   rspec-its (= 1.2.0)
   ruby-hmac (= 0.4.0)
