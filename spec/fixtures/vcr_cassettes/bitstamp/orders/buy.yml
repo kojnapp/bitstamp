@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://www.bitstamp.net/api/buy/
+    uri: https://www.bitstamp.net/api/v2/buy/btcusd/
     body:
       encoding: US-ASCII
       string: amount=1&key=BITSTAMP_KEY&nonce=1380238007&price=1.01&signature=CBDA383400523599498AE3ADA129CC184823B29E177571FB55DD97009EA50A7F&type=0

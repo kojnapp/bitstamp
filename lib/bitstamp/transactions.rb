@@ -27,7 +27,7 @@ module Bitstamp
 
   # adding in methods to pull the last public trades list
   class Transactions < Bitstamp::Model
-    attr_accessor :date, :price, :tid, :amount
+    attr_accessor :date, :price, :tid, :amount, :type
 
     def self.from_api(currency_pair)
       Bitstamp::Helper.parse_objects! Bitstamp::Net::get("/v2/transactions/#{currency_pair}").to_str, self

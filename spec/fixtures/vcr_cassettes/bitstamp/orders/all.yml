@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://www.bitstamp.net/api/open_orders/
+    uri: https://www.bitstamp.net/api/v2/open_orders/all/
     body:
       encoding: US-ASCII
       string: key=BITSTAMP_KEY&nonce=1380237985&signature=A151426BE039D2D0DD30F7779F70CE919E4E019F7BB2B962A6E1B23DA975C5D0

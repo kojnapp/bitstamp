@@ -18,9 +18,7 @@ describe Bitstamp do
     end
   end
 
-  describe :orders do
-    it { should respond_to :orders }
-  end
+  it { should respond_to :orders }
 
   describe :ticket, vcr: {cassette_name: 'bitstamp/ticker'} do
     subject { Bitstamp.ticker }
