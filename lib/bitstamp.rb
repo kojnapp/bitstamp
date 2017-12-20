@@ -1,3 +1,4 @@
+require 'active_support/dependencies/autoload'
 require 'active_support/core_ext'
 require 'active_support/inflector'
 require 'active_model'
