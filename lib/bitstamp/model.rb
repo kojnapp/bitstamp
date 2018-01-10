@@ -1,6 +1,6 @@
 module Bitstamp
   class Model
-    attr_accessor :error, :message
+    attr_accessor :error, :message, :reason
 
     include ActiveModel::Validations
     include ActiveModel::Conversion
