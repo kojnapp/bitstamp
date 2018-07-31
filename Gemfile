@@ -5,6 +5,7 @@ source "http://rubygems.org"
 gem "activemodel", '~> 5.1'
 gem "activesupport", '~> 5.1'
 gem "rest-client", '2.0.2'
+gem "nokogiri",  "~> 1.8.2"
 gem "ruby-hmac"
 
 # Add dependencies to develop your gem here.
