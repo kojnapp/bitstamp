@@ -22,7 +22,14 @@ module Bitstamp
   end
 
   class UserTransaction < Bitstamp::Model
-    attr_accessor :datetime, :id, :type, :usd, :btc, :fee, :order_id, :btc_usd, :nonce, :eth_btc, :eur, :eth, :btc_eur, :eth_eur, :eth_usd
+    attr_accessor :datetime, :id, :type, :usd,
+                  :btc, :fee, :order_id, :btc_usd,
+                  :nonce, :eth_btc, :eur, :eth,
+                  :btc_eur, :eth_eur, :eth_usd,
+                  :xrp, :xrp_usd, :xrp_eur, :xrp_btc,
+                  :ltc, :ltc_usd, :ltc_eur, :ltc_btc, 
+                  :bch, :bch_usd, :bch_eur, :bch_btc, 
+                  :eur_usd
   end
 
   # adding in methods to pull the last public trades list
