@@ -11,6 +11,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.4.0)
     builder (3.2.3)
+    byebug (10.0.2)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     descendants_tracker (0.0.4)
@@ -109,6 +110,7 @@ DEPENDENCIES
   activemodel (~> 4.2)
   activesupport (~> 4.2)
   bundler
+  byebug
   jeweler (~> 2.3.7)
   rdoc (~> 3.12)
   rest-client (~> 1.8)
@@ -122,4 +124,4 @@ RUBY VERSION
    ruby 2.3.3p222
 
 BUNDLED WITH
-   1.16.0.pre.2
+   1.16.1

@@ -1,7 +1,7 @@
 module Bitstamp
   class Orders < Bitstamp::Collection
     def all(options = {})
-      path = options[:currency_pair] ? "/v2/open_orders/#{currency_pair}" : "/v2/open_orders/all"
+      path = options[:currency_pair] ? "/v2/open_orders/#{options[:currency_pair]}" : "/v2/open_orders/all"
       Bitstamp::Helper.parse_objects! Bitstamp::Net::post(path).to_str, self.model
     end
 
