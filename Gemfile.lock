@@ -10,7 +10,6 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.4.0)
     builder (3.2.3)
-    byebug (10.0.2)
     concurrent-ruby (1.0.5)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
@@ -79,6 +78,9 @@ GEM
     rspec-expectations (3.8.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
+    rspec-its (1.2.0)
+      rspec-core (>= 3.0.0)
+      rspec-expectations (>= 3.0.0)
     rspec-mocks (3.8.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
@@ -104,11 +106,11 @@ DEPENDENCIES
   activemodel (~> 5.1)
   activesupport (~> 5.1)
   bundler
-  byebug
   jeweler
   rdoc
   rest-client (= 2.0.2)
   rspec
+  rspec-its
   ruby-hmac
   vcr (= 2.6.0)
   webmock (= 1.13.0)
@@ -117,4 +119,4 @@ RUBY VERSION
    ruby 2.4.1p111
 
 BUNDLED WITH
-   1.16.1
+   1.16.2

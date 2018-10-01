@@ -17,8 +17,8 @@ group :development do
 end
 
 group :test do
-  gem 'byebug'
   gem 'rspec'
+  gem 'rspec-its'
   gem 'vcr', '2.6.0'
   gem 'webmock', '1.13.0'
 end
