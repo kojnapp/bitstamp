@@ -21,5 +21,5 @@ group :test do
   gem 'rspec'
   gem 'rspec-its'
   gem 'vcr', '2.6.0'
-  gem 'webmock', '1.13.0'
+  gem 'webmock', '3.4.2'
 end
