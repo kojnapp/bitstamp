@@ -29,6 +29,7 @@ GEM
       hashie (>= 3.4)
       mime-types (>= 1.16, < 3.0)
       oauth2 (~> 1.0)
+    hashdiff (0.3.7)
     hashie (3.6.0)
     highline (2.0.0)
     http-cookie (1.0.3)
@@ -96,9 +97,10 @@ GEM
       unf_ext
     unf_ext (0.0.7.5)
     vcr (2.6.0)
-    webmock (1.13.0)
-      addressable (>= 2.2.7)
+    webmock (3.4.2)
+      addressable (>= 2.3.6)
       crack (>= 0.3.2)
+      hashdiff
 
 PLATFORMS
   ruby
@@ -115,7 +117,7 @@ DEPENDENCIES
   rspec-its
   ruby-hmac
   vcr (= 2.6.0)
-  webmock (= 1.13.0)
+  webmock (= 3.4.2)
 
 RUBY VERSION
    ruby 2.4.1p111
