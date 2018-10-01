@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://www.bitstamp.net/api/transactions/
+    uri: https://www.bitstamp.net/api/v2/transactions/btcusd/
     body:
       encoding: US-ASCII
       string: ''

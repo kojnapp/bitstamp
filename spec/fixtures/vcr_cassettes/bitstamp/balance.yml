@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://www.bitstamp.net/api/balance/
+    uri: https://www.bitstamp.net/api/v2/balance/btcusd/
     body:
       encoding: US-ASCII
       string: key=BITSTAMP_KEY&nonce=1380237671&signature=67768DD1BBDF45203840CC8688847A2DF5D224CA15B3ABDDC804EA251AC12211

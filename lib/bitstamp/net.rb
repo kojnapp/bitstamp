@@ -1,3 +1,4 @@
+require 'securerandom'
 module Bitstamp
   module Net
     def self.to_uri(path)
