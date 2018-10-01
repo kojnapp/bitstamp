@@ -10,6 +10,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.4.0)
     builder (3.2.3)
+    byebug (10.0.2)
     concurrent-ruby (1.0.5)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
@@ -106,6 +107,7 @@ DEPENDENCIES
   activemodel (~> 5.1)
   activesupport (~> 5.1)
   bundler
+  byebug
   jeweler
   rdoc
   rest-client (= 2.0.2)
