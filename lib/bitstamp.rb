@@ -1,4 +1,4 @@
-require 'active_support'
+require 'active_support/dependencies/autoload'
 require 'active_support/core_ext'
 require 'active_support/inflector'
 require 'active_model'
@@ -12,6 +12,7 @@ require 'bitstamp/model'
 
 require 'bitstamp/orders'
 require 'bitstamp/transactions'
+require 'bitstamp/withdrawals'
 require 'bitstamp/ticker'
 
 String.send(:include, ActiveSupport::Inflector)
@@ -48,8 +49,13 @@ module Bitstamp
 
   def self.balance(currency_pair = "btcusd")
     self.sanity_check!
-    path = currency_pair ? "/v2/balance/#{currency_pair}" : "/v2/balance"
+    path = currency_pair ? "/v2/balance/#{currency_pair}/" : "/v2/balance"
     JSON.parse Bitstamp::Net.post(path).to_str
+  end
+
+  def self.create_withdrawal(options = {})
+    self.sanity_check!
+    Bitstamp::Withdrawals.new.create(options)
   end
 
   def self.withdraw_bitcoins(options = {})

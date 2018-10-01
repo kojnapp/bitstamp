@@ -4,6 +4,7 @@
 .config
 bit_stamp_details.yml
 coverage
+test
 InstalledFiles
 lib/bundler/man
 pkg

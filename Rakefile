@@ -23,6 +23,10 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{Ruby API for use with bitstamp.}
   gem.email = "stygeo@gmail.com"
   gem.authors = ["Jeffrey Wilcke"]
+  #gem.add_dependency('activemodel', '~> 5.1')
+  #gem.add_dependency('activesupport', '~> 5.1')
+  #gem.add_dependency('rest-client', '2.0.2')
+  #gem.add_dependency('ruby-hmac', '= 0.4.0')
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new

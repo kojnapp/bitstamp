@@ -1,8 +1,8 @@
 module Bitstamp
   class Ticker < Bitstamp::Model
-    attr_accessor :last, :high, :low, :volume, :bid, :ask, :timestamp, :vwap
+    attr_accessor :last, :high, :low, :volume, :bid, :ask, :timestamp, :vwap, :open
 
-    def self.from_api(currency_pair)
+    def self.from_api(currency_pair = "btcusd")
       Bitstamp::Helper.parse_object!(Bitstamp::Net.get("/v2/ticker/#{currency_pair}").to_str, self)
     end
 
